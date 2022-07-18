@@ -23,12 +23,12 @@
                 <table class="table table-bordered" id="example" style="width:100%">
                     <thead>
                     <tr>
-                        <th>NO</th>
+                        {{-- <th>NO</th> --}}
                         <th>ID</th>
-                        <th>No Sertifikat</th>
-                        <th>Nama Aset</th>
-                        <th>Alamat</th>
-                        <th>Status Aset</th>
+                        <th>Nama Pemilik</th>
+                        <th>NO Sertifikat</th>
+                        <th>Keterangan</th>
+                        {{-- <th>Status Aset</th> --}}
                         {{-- <th>Luas Aset</th> --}}
                         {{-- <th>Kondisi Aset</th>
                         <th>Kondisi Geografis</th>
@@ -36,19 +36,21 @@
                         <th>Tahun Kepemilikan</th>
                         <th>Tahun Pembangunan</th>
                         <th>Tahun Rehab</th> --}}
-                        <th>Keterangan</th>
+                        {{-- <th>Keterangan</th> --}}
                         <th width="280px">Action</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach ($asets as $aset)
+                    @foreach ($pemilik as $item)
                     <tr>
-                        <td>{{ ++$i }}</td>
-                        <td>{{ $aset->id}}</td>
-                        <td>{{ $aset->no_sertifikat }}</td>
+                        <td>{{ $item->id }}</td>
+                        <td>{{ $item->nama }}</td>
+                        <td>{{ $item->aset->no_sertifikat}}</td>
+                        <td>{{ $item->keterangan}}</td>
+                       {{--   <td>{{ $aset->no_sertifikat }}</td>
                         <td>{{ $aset->nama_aset }}</td>
                         <td>{{ $aset->alamat_aset }}</td>
-                        <td>{{ $aset->status_aset }}</td>
+                        <td>{{ $aset->status_aset }}</td> --}}
                         {{-- <td>{{ $aset->luas_aset }}</td>
                         <td>{{ $aset->kondisi_aset }}</td>
                         <td>{{ $aset->kondisi_geografis }}</td>
@@ -56,20 +58,37 @@
                         <td>{{ $aset->th_kepemilikam }}</td>
                         <td>{{ $aset->th_pembangunan }}</td>
                         <td>{{ $aset->th_rehab }}</td> --}}
-                        <td>{{ $aset->keterangan_aset }}</td>
+                        {{-- <td>{{ $aset->keterangan_aset }}</td> --}}
                         <td>
                             
-                            <form action="{{ route('asets.destroy',$aset->id) }}" method="POST">
+                            <form action="{{ route('pemilik.destroy',$item->id) }}" method="POST">
 
-                                <a class="btn btn-info" href="{{ route('asets.show',$aset->id) }}">Detail</a>
+                                <a class="btn btn-info" href="{{ route('pemilik.show',$item->id) }}">Detail</a>
+                            
+                                {{-- <a class="btn btn-primary" href="{{ route('pemilik.edit',$item->id) }}">Edit</a> --}}
+                                @csrf
+                                @method('DELETE')
 
-{{-- <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
-  </button>
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                                
+                                {{-- <a class="btn btn-primary" href="{{ route('asets.edit',$aset->id) }}">Edit Belum Terserifikasi</a> --}}
+                                
+                                
+                            </form>
+                            {{-- <form action="{{ route('pemilik.destroy',$aset->id) }}" method="POST">
+                                <a class="btn btn-primary" href="{{ route('pemilik.edit',$aset->id) }}">Edit Tersertifikasi</a>
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            </form> --}}
+                        </td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+@endsection
+{{-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -77,8 +96,8 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-        </div>
-        <div class="modal-body">
+        </div> --}}
+        {{-- <div class="modal-body">
             @foreach ($asets as $aset)
             <table class="" style="margin:20px auto;" id="dataTable" width="100%" cellspacing="0">
                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -160,16 +179,8 @@
                             <td>{{ $aset->th_pembangunan }}</td>
                         </tr>
                     </div>
-                </div> --}}
-                {{-- <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <tr>
-                            <td>Tahun Pembangunan</td>
-                            <td>{{ $aset->th_pembangunan }}</td>
-                        </tr>
-                    </div>
-                </div> --}}
-                {{-- <div class="col-xs-12 col-sm-12 col-md-12">
+                </div> 
+                <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <tr>
                             <td>Tahun Rehab</td>
@@ -187,35 +198,31 @@
                 </div>
             </table>
             @endforeach
-        </div>
-        <div class="modal-footer">
+        </div> --}}
+        {{-- <div class="modal-body">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <tr>
+                        <td>Nama Pemilik</td>
+                        <td>:</td>
+                        <td>{{ $item->nama }}</td>
+                    </tr>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <tr>
+                        <td>Nama Pemilik</td>
+                        <td>:</td>
+                        <td>{{ $item->aset_id }}</td>
+                    </tr>
+                </div>
+            </div>
+        </div> --}}
+        {{-- <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
-  </div> --}}
-
-                                <a class="btn btn-primary" href="{{ route('asets.edit',$aset->id) }}">Edit</a>
-                                @csrf
-                                @method('DELETE')
-
-                                <button type="submit" class="btn btn-danger">Delete</button>
-                                
-                                {{-- <a class="btn btn-primary" href="{{ route('asets.edit',$aset->id) }}">Edit Belum Terserifikasi</a> --}}
-                                
-                                
-                            </form>
-                            {{-- <form action="{{ route('pemilik.destroy',$aset->id) }}" method="POST">
-                                <a class="btn btn-primary" href="{{ route('pemilik.edit',$aset->id) }}">Edit Tersertifikasi</a>
-
-                            </form> --}}
-                        </td>
-                    </tr>
-                    @endforeach
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-@endsection
+  </div>  --}}

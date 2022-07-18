@@ -91,13 +91,28 @@
                 </li>
 
                 <!-- Nav Item - Utilities Collapse Menu -->
-                <li class="nav-item active">
+                {{-- <li class="nav-item active">
                     <a class="nav-link collapsed text-dark" href="/asets">
-                        {{-- <i class="fas fa-fw fa-wrench"></i> --}}
                         <i class="fas fa-clipboard-list"></i>
                         <span>Laporan Data</span>
                     </a>
+                </li> --}}
+                <li class="nav-item">
+                    <a class="nav-link collapsed text-dark" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true"
+                        aria-controls="collapseUtilities">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>Laporan Data</span>
+                    </a>
+                    <div id="collapseUtilities" class="collapse" aria-labelledby="headingTwo"
+                        data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Custom Components:</h6>
+                            <a class="collapse-item active" href="pemilik">Tersertifikasi</a>
+                            <a class="collapse-item active" href="asets">Belum Tersertifikasi</a>
+                        </div>
+                    </div>
                 </li>
+
 
                 <!-- Divider -->
                 <hr class="sidebar-divider" style="background-color: #53c6c3;">

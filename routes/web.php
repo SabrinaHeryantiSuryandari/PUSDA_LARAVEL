@@ -44,9 +44,9 @@ Route::get('/tambah', function () {
 // Route::get('/editpemilik', function () {
 //     return view('admin.editpemilik');
 // });
-// Route::get('/tamu', function () {
-//     return view('tamu');
-// });
+Route::get('/lihat', function () {
+    return view('admin.lihat');
+});
 
 Auth::routes();
 Auth::routes(['verify' => false]);
@@ -65,6 +65,7 @@ Route::get('/pengguna',[view::class, 'pengguna']);
 // Route::delete('/pengguna/{id}', 'view@destroy')->name('pengguna.destroy');
 
 //tambahkan kode berikut
+// Route::resource('/asets', PemilikController::class);
 Route::resource('/asets', AsetController::class);
 Route::resource('/delete', view::class);
 

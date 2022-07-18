@@ -15,17 +15,12 @@ class PemilikController extends Controller
     {
     	// mengambil semua data pengguna
     	// $pemilik = Pemilik::all();
-        $asets = aset::all();
-
-        $pemilik = Pemilik::with('aset')->paginate(2);
+        $asets = Aset::all();
+        $pemilik = Pemilik::all();
+        // $pemilik = Pemilik::with('aset')->paginate(2);
     	// return data ke view
-    	return view('pemilik', compact('pemilik')
+    	return view('admin.tersertifikasi', compact('pemilik')
         );
-    }
-
-    public function show(Pemilik $pemilik)
-    {
-        return view('admin.show',compact('pemilik'));
     }
 
     public function create(){
@@ -44,5 +39,24 @@ class PemilikController extends Controller
         $pemilik = Pemilik::create($request->only(['aset_id', 'nama', 'keterangan']));
 
         return back()->with('success',' Post baru berhasil dibuat.');
+    }
+    
+    public function show(Pemilik $pemilik)
+    {
+        return view('admin.lihat',compact('pemilik'));
+    }
+
+    public function edit(Pemilik $pemilik)
+    {
+        return view('admin.edit',compact('pemilik'));
+    }
+
+    public function destroy(Pemilik $pemilik)
+    {
+        $pemilik->delete();
+       
+        return redirect()->route('pemilik.index')
+                        ->with('success','Aset Berhasil Dihapus!');
+    
     }
 }
