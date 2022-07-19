@@ -178,13 +178,15 @@
     {{-- background="{{ asset('template/')}} --}}
     <img src="{{ asset('img/bg.jpg') }}" id="bg" alt="">
 
-    <div class="card-img-overlay text-center mt-auto" style="top: 10rem;">
-        <!-- <h5 class="card-title">Card title</h5> -->
-        <h1 class="text-center">SELAMAT DATANG DI <br> SISTEM INFORMASI MANAJEMEN ASET TANAH <br> DINAS PEKERJAAN UMUM
-            SUMBER DAYA AIR </h1>
-        {{-- <button type="button" class="btn btn-info "> --}}
-        <a class="btn btn-primary" href="{{ route('login') }}"> Masuk</a>
-        {{-- </button> --}}
+    <div class="card-img-overlay text-center d-flex flex-column h-100">
+        <div class="my-auto">
+            <!-- <h5 class="card-title">Card title</h5> -->
+            <h1 class="text-center mb-5">SELAMAT DATANG DI <br> SISTEM INFORMASI MANAJEMEN ASET TANAH <br> DINAS PEKERJAAN UMUM
+                SUMBER DAYA AIR </h1>
+            {{-- <button type="button" class="btn btn-info "> --}}
+            <a class="btn btn-lg btn-primary mt-5" href="{{ route('login') }}"> Masuk</a>
+            {{-- </button> --}}
+        </div>
     </div>
     <!-- <a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a> -->
 
