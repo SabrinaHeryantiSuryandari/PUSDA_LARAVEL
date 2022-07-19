@@ -1,7 +1,7 @@
 @extends('layouts/index')
 @section('content')
     @section('judul')
-        {{'Detail Aset'}}
+        {{'Detail Aset '}}
     @endsection
     @section('title')
         {{'Detail Aset'}}

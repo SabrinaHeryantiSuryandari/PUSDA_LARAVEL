@@ -46,13 +46,22 @@ class view extends Controller
         return redirect()->route('admin.index')
                         ->with(['success' => 'Data Berhasil Disimpan!']);
     }
-    public function destroy(User $data)
-    {
-        // $data= User::findOrFail('id');
-        $data->delete();
+    // public function destroy(User $data)
+    // {
+    //     // $data= User::findOrFail('id');
+    //     $data->delete('id');
        
-        return redirect()->route('pengguna')
-                        ->with(['success' => 'Data Berhasil Dihapus!']);
+    //     return redirect()->route('pengguna')
+    //                     ->with(['success' => 'Data Berhasil Dihapus!']);
+    
+    // }
+
+    public function hapus($id){
+        DB::table('users')->where('id', $id)->delete();
+
+        return redirect('/pengguna');
+        // return redirect()->route('admin.index')
+        //                 ->with(['success' => 'Data Berhasil Dihapus!']);
     
     }
 }

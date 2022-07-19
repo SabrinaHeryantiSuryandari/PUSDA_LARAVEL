@@ -1,10 +1,10 @@
 @extends('layouts/index')
 @section('content')
     @section('judul')
-        {{'Input Data / Terferifikasi '}}
+        {{'Input Data / Tersertifikasi '}}
     @endsection
     @section('title')
-        {{'Input Data / Terferifikasi '}}
+        {{'Input Data / Tersertifikasi '}}
     @endsection
 
 @if ($errors->any())

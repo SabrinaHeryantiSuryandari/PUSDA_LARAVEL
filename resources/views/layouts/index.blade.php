@@ -51,62 +51,34 @@
                 <hr class="sidebar-divider" style="background-color: #53c6c3;">
 
                 <!-- Heading -->
-                <div class="sidebar-heading text-gray-50 ">
+                <div class="sidebar-heading text-black-50 ">
                     Data Aset Tanah
                 </div>
 
-                <!-- Nav Item - Pages Collapse Menu -->
-                {{-- <li class="nav-item @yield('input-data')">
-                <li class="nav-item collapsed"> --}}
-                    {{-- <a class="nav-link text-dark" href="/create"> --}}
-                    {{-- <a class="nav-link text-dark @yield('input-data-collapse')" href="" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> --}}
-                    {{-- <a class="nav-link text-dark" href="" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> --}}
-                        {{-- <i class="fas fa-fw fa-cog"></i> --}}
-                        {{-- <i class="fa-solid fa-chart-pie"></i>
-                        <span>Input Data</span>
-                    </a>
-                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
-                    data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Custom Components:</h6>
-                            <a class="collapse-item @yield('input-sudah')" href="{{ url('/create') }}">Tersertifikasi</a>
-                            <a class="collapse-item @yield('input-belum')" href="{{ url('/belum-create') }}">Belum Tersertifikasi</a>
-                        </div>
-                    </div>
-                </li> --}}
                 <li class="nav-item">
                     <a class="nav-link collapsed text-dark" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
                         aria-controls="collapseTwo">
                         <i class="fa-solid fa-chart-pie"></i>
-                        <span>Input Data</span>
+                        <span><b>Input Data</b> </span>
                     </a>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                         data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Custom Components:</h6>
                             <a class="collapse-item active" href="tambah">Tersertifikasi</a>
                             <a class="collapse-item active" href="create">Belum Tersertifikasi</a>
                         </div>
                     </div>
                 </li>
 
-                <!-- Nav Item - Utilities Collapse Menu -->
-                {{-- <li class="nav-item active">
-                    <a class="nav-link collapsed text-dark" href="/asets">
-                        <i class="fas fa-clipboard-list"></i>
-                        <span>Laporan Data</span>
-                    </a>
-                </li> --}}
                 <li class="nav-item">
                     <a class="nav-link collapsed text-dark" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true"
                         aria-controls="collapseUtilities">
                         <i class="fas fa-clipboard-list"></i>
-                        <span>Laporan Data</span>
+                        <span><b>Laporan Data</b> </span>
                     </a>
                     <div id="collapseUtilities" class="collapse" aria-labelledby="headingTwo"
                         data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Custom Components:</h6>
                             <a class="collapse-item active" href="pemilik">Tersertifikasi</a>
                             <a class="collapse-item active" href="asets">Belum Tersertifikasi</a>
                         </div>
@@ -118,7 +90,7 @@
                 <hr class="sidebar-divider" style="background-color: #53c6c3;">
 
                 <!-- Heading -->
-                <div class="sidebar-heading text-gray-50">
+                <div class="sidebar-heading text-black-50">
                     Pengaturan
                 </div>
 
@@ -187,41 +159,6 @@
                     </div>
                     <!-- Topbar search -->
 
-                    <!-- Topbar Navbar -->
-                    {{-- <ul class="navbar-nav ml-auto">
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-white small">Douglas McGee</span>
-                            <img class="img-profile rounded-circle"
-                            src="{{ asset('template/img/undraw_profile.svg')}}">
-                        </a>
-                        <!-- Dropdown - User Information -->
-                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                        aria-labelledby="userDropdown">
-                         <a class="dropdown-item" href="#">
-                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                            Profile
-                        </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a> 
-                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
-
-                    </ul>  --}}
-
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
@@ -231,11 +168,6 @@
                                 </li>
                             @endif
 
-                            {{-- @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif --}}
                             @else
                             <li class="nav-item dropdown no-arrow">
                                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
@@ -269,8 +201,6 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">@yield('judul')</h1>
-                        <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                            class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
                     </div>
 
                         {{-- isi --}}

@@ -4,10 +4,10 @@
 @section('input-sudah', 'active')
 @section('content')
     @section('judul')
-        {{'Input Data / Belum Terferifikasi'}}
+        {{'Input Data / Belum Tersertifikasi'}}
     @endsection
     @section('title')
-        {{'Input Data / Belum Terferifikasi'}}
+        {{'Input Data / Belum Tersertifikasi'}}
     @endsection
 
 <!-- Content Row -->

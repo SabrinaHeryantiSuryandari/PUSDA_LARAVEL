@@ -56,7 +56,10 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/admin',[view::class, 'index']);
 Route::get('/masuk',[view::class, 'login']);
 Route::post('/save',[view::class, 'save']);
-// Route::delete('/delete',[view::class, 'delete']);
+// Route::delete('/admin/{id}',[view::class, 'delete']);
+// Route::delete('/admin/{id}', 'view@destroy')->name('admin.destroy');
+// Route::get('admin/hapus/{id}', 'view@hapus');
+Route::get('admin/hapus/{id}', [view::class, 'hapus']);
 
 Route::get('/guest',[GuestController::class, 'index'])->name('guest');
 

@@ -17,23 +17,8 @@
               <div class="card-body">
                   <h5 class="card-title">{{ $item->name }}</h5>
                   <p class="card-text">{{ ($item->email) }}</p>
-                  {{-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
-                  {{-- <form action="{{ route('delete.destroy',$item->id) }}" method="POST"> --}}
-            
-                    {{-- <a class="btn btn-info" href="{{ route('asets.show',$item->id) }}">Detail</a> --}}
-                    {{-- <a class="btn btn-primary" href="{{ route('asets.edit',$item->id) }}">Edit</a> --}}
-{{--             
-                                @csrf
-                                @method('DELETE')
-                                <a type="submit" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></a> --}}
-                                {{-- {{viuw::hidden('_method', 'DELETE')}} --}}
-                                {{-- <input type="hidden" value="DELETE" name="_method">
-                                <input type="submit" value="Delete" class="btn btn-danger btn-sm"> --}}
-                              {{-- </form> --}}
-                            
-                            {{-- <a href="{{route('pengguna.destroy', ['id' => $data->id])}}" onclick="return confirm('Weet je dit zeker?')">
-                              <i class="fa fa-trash"></i>
-                            </a> --}}
+
+                  <a class="btn btn-danger" href="/admin/hapus/{{ $item->id}}"><i class="fa-solid fa-trash-can"></i></a>
               </div>
           </div>
           <br>
@@ -72,9 +57,10 @@
             </div>
         @endif
 
-      <div class="card-header text-center">{{ __('Register') }}</div>
+      <div class="card-header text-center text-white " style="background-color: #40B9CB;">{{ __('Register') }}</div>
       <br>
-        <form action="/save" method="POST" enctype="multipart/form-data">
+        {{-- <form action="/save" method="POST" enctype="multipart/form-data"> --}}
+        <form method="POST" enctype="multipart/form-data">
                               
           @csrf
           {{-- Nama --}}
@@ -131,18 +117,26 @@
                   <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
               </div>
           </div>
+         {{-- Register --}}
+         <div class="col-md-6 offset-md-4">
+            <button type="submit" class="btn btn-primary">
+                {{-- {{ __('Register') }} --}}
+                Register
+            </button>
+        </div>
 
-          {{-- Register --}}
-          <div class="col-md-6 offset-md-4">
-              <button type="submit" class="btn btn-primary">
+
+         
+        </form>
+        {{-- <form action="/seve" > --}}
+                  {{-- Register --}}
+          {{-- <div class="col-md-6 offset-md-4">
+              <button type="submit" class="btn btn-primary"> --}}
                   {{-- {{ __('Register') }} --}}
-                  Register
+                  {{-- Register
               </button>
           </div>
-
-          {{-- <button type="submit" class="btn btn-md btn-primary">SIMPAN</button>
-          <button type="reset" class="btn btn-md btn-warning">RESET</button> --}}
-        </form>
+        </form> --}}
         {{-- <form action="{{ route('delete',$item->id) }}" method="POST">
 
           {{-- <a class="btn btn-info" href="{{ route('asets.show',$data->id) }}">Detail</a>
@@ -161,3 +155,5 @@
 
 
 @endsection
+
+

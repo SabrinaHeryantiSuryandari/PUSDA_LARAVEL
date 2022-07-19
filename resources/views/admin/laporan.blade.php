@@ -10,6 +10,7 @@
 <!-- Content Row -->
     <div class="card shadow mb-3 ">
         <div class="card-header py-2 "style="background-color: #40B9CB;">
+            {{-- <h6 class="m-0 font-weight-bold text-white" href="laporan">kembali</h6> --}}
             <h6 class="m-0 font-weight-bold text-white text-center">Tabel Data Aset</h6>
         </div>
         <div class="card-body">
