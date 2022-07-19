@@ -93,9 +93,26 @@
     <!-- Custom styles for this template-->
     <link href="{{ asset('template/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+
+        /* style untuk gambar fullscreen */
+        #bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            /* Preserve aspet ratio */
+            min-width: 100%;
+            min-height: 100%;
+        }
+    </style>
 </head>
 
-<body background="{{ asset('img/login.jpeg')}}">
+<body>
+    <img src="{{ asset('img/login.jpeg') }}" id="bg" alt="">
 
     <div class="container col-lg-6">
 
