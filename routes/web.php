@@ -63,7 +63,7 @@ Route::get('admin/hapus/{id}', [view::class, 'hapus']);
 
 Route::get('/guest',[GuestController::class, 'index'])->name('guest');
 
-Route::get('/pengguna',[view::class, 'pengguna']);
+Route::get('/pengguna',[view::class, 'pengguna'])->name('pengguna');
 // Route::dele('/delete',[view::class, 'destroy']);
 // Route::delete('/pengguna/{id}', 'view@destroy')->name('pengguna.destroy');
 

@@ -42,8 +42,8 @@ class view extends Controller
             'email' => $request['email'],
             'password' => Hash::make($request['password']),
         ]);
-        User::create($request->all());
-        return redirect()->route('admin.index')
+        // User::create($request->all());
+        return redirect()->route('pengguna')
                         ->with(['success' => 'Data Berhasil Disimpan!']);
     }
     // public function destroy(User $data)

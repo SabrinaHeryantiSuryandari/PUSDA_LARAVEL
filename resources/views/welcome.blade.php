@@ -162,11 +162,10 @@
         </style>
     </head>
     <body class="antialiased" background="img/bg.jpg">
-<!-- background="{{ asset('template/')}} -->
 
   <div class="card-img-overlay text-center mt-auto" style="top: 10rem;">
     <!-- <h5 class="card-title">Card title</h5> -->
-    <h1 class="text-center">SELAMAT DATANG DI <br> SISTEM INFORMASI MANAJEMEN ASET TANAH <br> DINAS PEKERJAAN UMUM SUMBER DAYA AIR </h1>
+    <h1 class="text-center ">SELAMAT DATANG DI <br> SISTEM INFORMASI MANAJEMEN ASET TANAH <br> DINAS PEKERJAAN UMUM SUMBER DAYA AIR </h1>
     {{-- <button type="button" class="btn btn-info "> --}}
         <a class="btn btn-primary" href="{{ route('login') }}"> Masuk</a>
     {{-- </button> --}}
