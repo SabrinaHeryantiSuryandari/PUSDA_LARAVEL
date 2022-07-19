@@ -32,9 +32,9 @@
         <!-- Sidebar -->
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background: #82DBD8;">
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center text-dark" href="/home">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center text-dark" href="{{ url('home') }}">
                 <div class="sidebar-brand-icon">
-                    <img src="img/logo.png" alt="Image" width="110px" height="39px">
+                    <img src="{{ asset('img/logo.png') }}" alt="Image" width="110px" height="39px">
                 </div>
             </a>
 
