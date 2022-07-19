@@ -141,7 +141,7 @@
                     </div>
 
                     <!-- Topbar Search -->
-                    <div class="container row">
+                    {{-- <div class="container row">
                         <div class="col-lg-12 nav justify-content-end">
 
                             <div class="col-lg-6">
@@ -156,7 +156,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- Topbar search -->
 
                     <ul class="navbar-nav ml-auto">

@@ -11,7 +11,16 @@
 
     <div class="card shadow mb-3 ">
         <div class="card-header py-2 " style="background-color: #40B9CB;">
-            <h6 class="m-0 font-weight-bold text-white text-center">Data Aset</h6>
+            <div class="row">
+                <div>
+                    <h6 type="button" class="btn">
+                        <a href="{{ url('asets') }}"><i class="fa-solid fa-chevron-left"></i></a>
+                    </h6>
+                </div>
+                <div class="col-lg-11 mt-2">
+                    <h6 class="m-0 font-weight-bold text-white text-center">Data Aset Tanah</h6>
+                </div>
+            </div>
         </div>
         <div class="card-body">
             <div class="table-responsive" >

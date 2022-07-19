@@ -1,10 +1,10 @@
 @extends('layouts/index')
 @section('content')
     @section('judul')
-        {{'Laporan Data / Belum Tersertifikasi'}}
+        {{'Laporan Data / Tersertifikasi'}}
     @endsection
     @section('title')
-        {{'Laporan Data yang Belum Tersertifikasi'}}
+        {{'Laporan Data yang Tersertifikasi'}}
     @endsection
 
 <!-- Content Row -->
