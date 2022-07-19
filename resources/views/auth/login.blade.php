@@ -119,14 +119,11 @@
         <!-- Outer Row -->
         
         <div class="row justify-content-center card-body">
-            
 
-                <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="my-auto card o-hidden border-0 shadow-lg my-5">
                    
                                 <div class="p-5">
                                     <div class="text-center">
-                                        {{-- <h1 class="h4 text-gray-900 mb-4">{{ __('Login') }}</h1> --}}
-                                        {{-- <div class="card-header">{{ __('Login') }}</div> --}}
                                         <img src="img/logo.png" alt="logo" width="140px" height="52px">
                                     </div><br>
                                     {{-- <form class="user"> --}}
