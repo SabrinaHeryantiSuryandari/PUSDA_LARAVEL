@@ -4,7 +4,7 @@
         {{'Input Data / Tersertifikasi '}}
     @endsection
     @section('title')
-        {{'Input Data / Tersertifikasi '}}
+        {{'Input Data yang Tersertifikasi '}}
     @endsection
 
 @if ($errors->any())

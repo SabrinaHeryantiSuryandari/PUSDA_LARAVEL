@@ -1,10 +1,10 @@
 @extends('layouts/index')
 @section('content')
     @section('judul')
-        {{'Laporan Data'}}
+        {{'Laporan Data / Belum Tersertifikasi'}}
     @endsection
     @section('title')
-        {{'Laporan Data'}}
+        {{'Laporan Data yang Belum Tersertifikasi'}}
     @endsection
 
 <!-- Content Row -->
@@ -27,7 +27,7 @@
                         <th>ID</th>
                         <th>Nama Pemilik</th>
                         <th>NO Sertifikat</th>
-                        <th>Keterangan</th>
+                        <th>Keterangan Pemilik</th>
                         {{-- <th>Status Aset</th> --}}
                         {{-- <th>Luas Aset</th> --}}
                         {{-- <th>Kondisi Aset</th>

@@ -7,7 +7,7 @@
         {{'Input Data / Belum Tersertifikasi'}}
     @endsection
     @section('title')
-        {{'Input Data / Belum Tersertifikasi'}}
+        {{'Input Data yang Belum Tersertifikasi'}}
     @endsection
 
 <!-- Content Row -->
@@ -27,7 +27,7 @@
     @csrf
 
         <div class="card shadow mb-3 ">
-            <div class="card-header py-2 "style="background-color: #40B9CB;">
+            <div class="card-header py-2 " style="background-color: #40B9CB;">
                 <h6 class="m-0 font-weight-bold text-white text-center">Masukkan Data Aset Belum Terferifikasi</h6>
             </div>
             <div class="card-body">

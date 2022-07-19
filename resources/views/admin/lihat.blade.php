@@ -29,7 +29,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <tr>
-                                <td>Keterangan</td>
+                                <td>Keterangan Pemilik</td>
                                 <td>:</td>
                                 <td>{{ $pemilik->keterangan }}</td>
                                 {{-- <td>{{ $pemilik->aset->nama_aset}}</td> --}}
@@ -125,6 +125,24 @@
                                 <td>Tahun Pembangunan</td>
                                 <td>:</td>
                                 <td>{{ $pemilik->aset->th_pembangunan }}</td>
+                            </tr>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <tr>
+                                <td>Tahun Rehabilitasi</td>
+                                <td>:</td>
+                                <td>{{ $pemilik->aset->th_rehab }}</td>
+                            </tr>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <tr>
+                                <td>Keterangan</td>
+                                <td>:</td>
+                                <td>{{ $pemilik->aset->keterangan_aset }}</td>
                             </tr>
                         </div>
                     </div>

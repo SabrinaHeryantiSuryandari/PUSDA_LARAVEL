@@ -106,18 +106,10 @@
                             </tr>
                         </div>
                     </div>
-                    {{-- <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <tr>
-                                <td>Tahun Pembangunan</td>
-                                <td>{{ $aset->th_pembangunan }}</td>
-                            </tr>
-                        </div>
-                    </div> --}}
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <tr>
-                                <td>Tahun Rehab</td>
+                                <td>Tahun Rehabilitasi</td>
                                 <td>:</td>
                                 <td>{{ $aset->th_rehab }}</td>
                             </tr>
