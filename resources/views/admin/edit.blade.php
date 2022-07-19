@@ -32,7 +32,7 @@
                                 <a href="{{ url('asets') }}"><i class="fa-solid fa-chevron-left"></i></a>
                             </h6>
                         </div>
-                        <div class="col-lg-11 mt-2">
+                        <div class="col-lg-11 m-2">
                             <h6 class="m-0 font-weight-bold text-white text-center">Masukkan Data Baru</h6>
                         </div>
                     </div>
