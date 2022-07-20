@@ -69,13 +69,13 @@
 <div class="row">
 
     <!-- Area Chart -->
-    <div class="card text-center mx-3 my-3 col-12">
-        <div class="card-header py-2 text-white" style="background-color: #40B9CB;">
-            <b>INDEX ASET TERDATA</b> 
+    <div class="card shadow mb-4  text-center my-3 col-12">
+        <div class="card-header text-white" style="background-color: #40B9CB;">
+            Index Aset Terdata
         </div>
         <canvas id="myChart" width="400" height="100"></canvas>
-        <div class="card-footer py-2 text-muted" style="background-color: #40B9CB;">
-            
+        <div class="card-footer text-white" style="background-color: #40B9CB;">
+            2 days ago
         </div>
     </div>
 </div>

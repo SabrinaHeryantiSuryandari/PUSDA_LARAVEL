@@ -272,15 +272,15 @@
     <script src="{{ asset('template/vendor/chart.js/Chart.min.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" integrity="sha512-yFjZbTYRCJodnuyGlsKamNE/LlEaEAxSUDe5+u61mV8zzqJVFOH7TnULE2/PP/l5vKWpUNnF4VGVkXh3MjgLsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        const ctx = document.getElementById('myChart').getContext('2d');
-        const myChart = new Chart(ctx, {
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
                 // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
                 labels: ['2017', '2018', '2019', '2020', '2021', '2022'],
                 datasets: [{
                     label: 'Index Data Pertahun',
-                    data: [12, 19, 3, 5, 2, 3],
+                    data: [12, 19, 5, 6, 3, 4],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -309,6 +309,12 @@
             }
         });
         </script>
+        <script>
+            var myChart = new Chart(
+              document.getElementById('myChart'),
+              config
+            );
+          </script>
     <script>
         //message with toastr
         @if(session()->has('success'))
