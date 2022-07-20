@@ -52,10 +52,10 @@
                   <a class="nav-link" href="/guest">Beranda</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/dataaset">Data Aset</a>
+                  <a class="nav-link" href="">Data Aset</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/evaluasi">Laporan Evaluasi</a>
+                  <a class="nav-link" href="">Laporan Evaluasi</a>
                 </li>
             </ul>
         </div>
